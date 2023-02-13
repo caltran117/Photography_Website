@@ -1,7 +1,6 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "cross-env NODE_ENV=test jest --watchAll --verbose",
@@ -27,5 +26,6 @@
   "devDependencies": {
     "jest": "^29.4.2",
     "nodemon": "^2.0.20"
-  }
+  },
+  "description": ""
 }
