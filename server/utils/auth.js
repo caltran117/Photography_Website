@@ -4,28 +4,33 @@ const secret = 'mysecretssshhhhhhh';
 const expiration = '2h';
 
 module.exports = {
-  authMiddleware: function ({ req }) {
-    let token = req.body.token || req.query.token || req.headers.authorization;
+    authMiddleware: function ({ request: req, contextValue }) {
+        const header = req.http.headers.get('authorization') || req.http.headers.get('Authorization');
+        let token = req.http.body.token || header;
 
-    if (req.headers.authorization) {
-      token = token.split(' ').pop().trim();
-    }
+        if (header) {
+            token = token.split(' ').pop().trim();
+        }
 
-    if (!token) {
-      return req;
-    }
+        if (!token) {
+            return false;
+        }
 
-    try {
-      const { data } = jwt.verify(token, secret, { maxAge: expiration });
-      req.user = data;
-    } catch {
-      console.log('Invalid token');
-    }
+        try {
+            const { data } = jwt.verify(token, secret, { maxAge: expiration });
+            if (data) {
+                contextValue.user = data;
+            }
+            return data;
+        } catch (err) {
+            console.log(err);
+            console.log('Invalid token');
+        }
 
-    return req;
-  },
-  signToken: function ({ email, username, _id }) {
-    const payload = { email, username, _id };
-    return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
-  },
+        return false;
+    },
+    signToken: function ({ email, username, _id }) {
+        const payload = { email, username, _id };
+        return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
+    },
 };
