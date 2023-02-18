@@ -6,6 +6,7 @@ import { ADD_THOUGHT } from '../../utils/mutations';
 import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
 
 import Auth from '../../utils/auth';
+import isWindows from 'cross-env/src/is-windows';
 
 const ThoughtForm = () => {
   const [thoughtText, setThoughtText] = useState('');
@@ -46,6 +47,7 @@ const ThoughtForm = () => {
       });
 
       setThoughtText('');
+      window.location.reload()
     } catch (err) {
       console.error(err);
     }
