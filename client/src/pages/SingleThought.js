@@ -28,7 +28,7 @@ const SingleThought = () => {
       <h3 className="card-header bg-dark text-light p-2 m-0">
         {thought.thoughtAuthor} <br />
         <span style={{ fontSize: '1rem' }}>
-          had this thought on {thought.createdAt}
+          This photo posted on {thought.createdAt}
         </span>
       </h3>
       <div className="bg-light py-4">
@@ -41,7 +41,7 @@ const SingleThought = () => {
             lineHeight: '1.5',
           }}
         >
-          {thought.thoughtText}
+            <a href={thought.thoughtText}><img src={thought.thoughtText}/></a>
         </blockquote>
       </div>
 

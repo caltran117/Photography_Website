@@ -89,15 +89,15 @@ const ThoughtForm = () => {
             </div>
 
             <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
+              <button className="btn btn-primary btn-block py-3" type="submit" >
                 Add Thought
               </button>
             </div>
-            {error && (
+            {/* {error && (
               <div className="col-12 my-3 bg-danger text-white p-3">
                 {error.message}
               </div>
-            )}
+            )} */}
           </form>
         </>
       ) : (
