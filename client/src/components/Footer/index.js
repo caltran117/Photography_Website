@@ -5,7 +5,7 @@ const Footer = () => {
   const location = useLocation();
   const navigate = useNavigate();
   return (
-    <footer className="w-100 mt-auto bg-secondary p-4">
+    <footer className="w-100 mt-auto bg-black p-4">
       <div className="container text-center mb-5">
         {location.pathname !== '/' && (
           <button
@@ -16,7 +16,7 @@ const Footer = () => {
           </button>
         )}
         <Link to="/">
-        <h4>
+        <h4 className="bg-white">
           Home
         </h4>
         </Link>

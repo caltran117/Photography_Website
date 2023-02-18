@@ -11,7 +11,10 @@ html {
   -webkit-text-size-adjust: 100%;
   /* 2 */
 }
-
+.myname{
+  font-family:fantasy;
+  font-size:500%;
+}
 img{
   width: 100%
 }
