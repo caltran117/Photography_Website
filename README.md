@@ -13,7 +13,7 @@ npm i, yarn, mongoose, react, bootstrap
 
 ## Usage
 
-3 images are links to my projects
+homepage of photography app
 
 ![image](https://user-images.githubusercontent.com/84696281/219906766-5ff0f000-8928-484e-b6ef-d399ef8bd211.png)
 
