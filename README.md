@@ -15,8 +15,7 @@ npm i, yarn, mongoose, react, bootstrap
 
 3 images are links to my projects
 
-![website img](![image](https://user-images.githubusercontent.com/84696281/219906766-5ff0f000-8928-484e-b6ef-d399ef8bd211.png)
-)
+![image](https://user-images.githubusercontent.com/84696281/219906766-5ff0f000-8928-484e-b6ef-d399ef8bd211.png)
 
 ## Credits
 
